@@ -1,0 +1,20 @@
+<div>
+    <div class ="logo">Warehousing, Logistics and Material Handling Sector in India</div>
+    <form (ngSubmit)="login()">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" [(ngModel)]="username" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" [(ngModel)]="password" required>
+        <br>
+        <label>Login As:</label>
+        <select [(ngModel)]="loginType" name="loginType">
+            <option value="inventory">Inventory</option>
+            <option value="delivery">Delivery</option>
+        </select>
+        <br>
+        <button type="submit">Login</button>
+    </form>
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+</div>
+
